@@ -6,16 +6,57 @@ body {
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: #e0b0ff;
   color: black;
   border-radius: 0;
   border-bottom: 8px solid black;
 }
 
-textarea {
+.textarea {
   background: transparent;
   resize: none;
   color: black;
   border-left: 4px dashed black;
   padding: 14px;
+}
+.task {
+  white-space: pre-wrap;
+  background-color: lavender;
+}
+
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+  border-top: 1px dashed;
+}
+
+.hour {
+  color: black;
+  border-top: 1px dashed black;
+  background-color: #e0b0ff;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.past {
+  background-color: slategray;
+}
+
+.present {
+  background-color: salmon;
+}
+
+.future {
+  background-color: lightgreen;
+}
+
+.saveBtn {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #e0b0ff;
+}
+
+.saveBtn i:hover {
+  font-size: 20px;
 }
