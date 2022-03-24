@@ -49,6 +49,8 @@ THEN the saved events persist
 
 ### Usage
 
+Application users have the ability to enter workday tasks and save them. Time slots are color coded based on whether the task is in the past, present, or future.
+
 ### Webpage Screenshots
 
 ### GitHub Link
