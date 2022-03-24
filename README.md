@@ -22,8 +22,10 @@ This application includes the following features:
 
 - HTML
 - CSS
+- Javascript
 - Moment.js
 - jQuery
+- Bootstrap
 
 ### User Story
 

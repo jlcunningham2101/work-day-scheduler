@@ -1,0 +1,21 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  background-color: lavender;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 8px solid black;
+}
+
+textarea {
+  background: transparent;
+  resize: none;
+  color: black;
+  border-left: 4px dashed black;
+  padding: 14px;
+}
