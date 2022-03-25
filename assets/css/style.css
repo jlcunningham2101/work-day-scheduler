@@ -43,11 +43,11 @@ body {
 }
 
 .present {
-  background-color: salmon;
+  background-color: lightgreen;
 }
 
 .future {
-  background-color: lightgreen;
+  background-color: orange;
 }
 
 .saveBtn {
@@ -59,4 +59,5 @@ body {
 
 .saveBtn i:hover {
   font-size: 20px;
+  transition: all 0.3s ease-in-out;
 }
