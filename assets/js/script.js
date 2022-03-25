@@ -16,3 +16,10 @@ $(document).ready(function () {
   update();
   setInterval(update, 1000);
 });
+
+saveButtonEl.click(function (event) {
+  event.preventDefault();
+  console.log($(this).siblings("textarea").val());
+  console.log($(this).attr("id"));
+  localStorage.setItem($(this).attr("id"), $(this).siblings("textarea").val());
+});
