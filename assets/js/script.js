@@ -25,6 +25,7 @@ function hourTracker() {
     }
   });
 
+  $("#hour8 .description").val(localStorage.getItem("hour8"));
   $("#hour9 .description").val(localStorage.getItem("hour9"));
   $("#hour10 .description").val(localStorage.getItem("hour10"));
   $("#hour11 .description").val(localStorage.getItem("hour11"));
@@ -34,6 +35,8 @@ function hourTracker() {
   $("#hour15 .description").val(localStorage.getItem("hour15"));
   $("#hour16 .description").val(localStorage.getItem("hour16"));
   $("#hour17 .description").val(localStorage.getItem("hour17"));
+  $("#hour18 .description").val(localStorage.getItem("hour18"));
+  $("#hour19 .description").val(localStorage.getItem("hour19"));
 }
 hourTracker();
 $(document).ready(function () {
@@ -48,21 +51,6 @@ $(document).ready(function () {
 
     localStorage.setItem(currentHour, currentText);
   });
-
-  // Load local storage data into each hour
-
-  $("#hour5 .description").val(localStorage.getItem("hour5"));
-  $("#hour6 .description").val(localStorage.getItem("hour6"));
-  $("#hour7 .description").val(localStorage.getItem("hour7"));
-  $("#hour8 .description").val(localStorage.getItem("hour8"));
-  $("#hour9 .description").val(localStorage.getItem("hour9"));
-  $("#hour10 .description").val(localStorage.getItem("hour10"));
-  $("#hour11 .description").val(localStorage.getItem("hour11"));
-  $("#hour12 .description").val(localStorage.getItem("hour12"));
-  $("#hour1 .description").val(localStorage.getItem("hour1"));
-  $("#hour2 .description").val(localStorage.getItem("hour2"));
-  $("#hour3 .description").val(localStorage.getItem("hour3"));
-  $("#hour4 .description").val(localStorage.getItem("hour4"));
 
   function testHour() {
     var currentHour = moment().hour();

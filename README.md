@@ -56,9 +56,9 @@ Application users have the ability to enter workday tasks and save them. Time sl
 
 ### Webpage Screenshots
 
-![Screenshot](<assets/images/Screenshot%20(34).png>)
-![Screenshot](<assets/images/Screenshot%20(35).png>)
-![Screenshot](<assets/images/Screenshot%20(36).png>)
+![Screenshot](<assets/images/Screenshot%20(42).png>)
+![Screenshot](<assets/images/Screenshot%20(43).png>)
+![Screenshot](<assets/images/Screenshot%20(44).png>)
 
 ### GitHub Link
 
