@@ -1,23 +1,22 @@
-function hourlyTasks() {
-  $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
-
+function hourTracker() {
   $(".saveBtn").on("click", function () {
-    var userTask = $(this).siblings(".task").val();
-    var timeslots = $(this).parent().attr("id");
-    localStorage.setItem(userTask, timeslots);
+    var text = $(this).siblings(".description").val();
+    var time = $(this).parent().attr("id");
+
+    localStorage.setItem(time, text);
   });
-  var presentHour = moment().hour();
+  var currentHour = moment().hour();
 
-  $(".hour").each(function () {
-    var chosenHour = parseInt($(this).attr("id").split("hour")[1]);
+  $(".time-block").each(function () {
+    var blockHour = parseInt($(this).attr("id").split("hour")[1]);
 
-    if (chosenHour < presentHour) {
-      $(this).removeClass("present");
+    if (blockHour < currentHour) {
       $(this).addClass("past");
       $(this).removeClass("future");
-    } else if (chosenHour === presentHour) {
-      $(this).addClass("present");
+      $(this).removeClass("present");
+    } else if (blockHour === currentHour) {
       $(this).removeClass("past");
+      $(this).addClass("present");
       $(this).removeClass("future");
     } else {
       $(this).removeClass("present");
@@ -26,16 +25,67 @@ function hourlyTasks() {
     }
   });
 
-  $("#clock-8 .task").val(localStorage.getItem("8AM"));
-  $("#clock-9 .task").val(localStorage.getItem("9AM"));
-  $("#clock-10 .task").val(localStorage.getItem("10AM"));
-  $("#clock-11 .task").val(localStorage.getItem("11AM"));
-  $("#clock-12 .task").val(localStorage.getItem("12PM"));
-  $("#clock-13 .task").val(localStorage.getItem("1PM"));
-  $("#clock-14 .task").val(localStorage.getItem("2PM"));
-  $("#clock-15 .task").val(localStorage.getItem("3PM"));
-  $("#clock-16 .task").val(localStorage.getItem("4PM"));
-  $("#clock-17 .task").val(localStorage.getItem("5PM"));
+  $("#hour9 .description").val(localStorage.getItem("hour9"));
+  $("#hour10 .description").val(localStorage.getItem("hour10"));
+  $("#hour11 .description").val(localStorage.getItem("hour11"));
+  $("#hour12 .description").val(localStorage.getItem("hour12"));
+  $("#hour13 .description").val(localStorage.getItem("hour13"));
+  $("#hour14 .description").val(localStorage.getItem("hour14"));
+  $("#hour15 .description").val(localStorage.getItem("hour15"));
+  $("#hour16 .description").val(localStorage.getItem("hour16"));
+  $("#hour17 .description").val(localStorage.getItem("hour17"));
 }
+hourTracker();
+$(document).ready(function () {
+  $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
 
-hourlyTasks();
+  $(".saveBtn").on("click", function () {
+    console.log(this);
+    var currentHour = $(this).parent().attr("id");
+    console.log(currentHour);
+    var currentText = $(this).siblings(".description").val();
+    console.log(currentText);
+
+    localStorage.setItem(currentHour, currentText);
+  });
+
+  // Load local storage data into each hour
+
+  $("#hour5 .description").val(localStorage.getItem("hour5"));
+  $("#hour6 .description").val(localStorage.getItem("hour6"));
+  $("#hour7 .description").val(localStorage.getItem("hour7"));
+  $("#hour8 .description").val(localStorage.getItem("hour8"));
+  $("#hour9 .description").val(localStorage.getItem("hour9"));
+  $("#hour10 .description").val(localStorage.getItem("hour10"));
+  $("#hour11 .description").val(localStorage.getItem("hour11"));
+  $("#hour12 .description").val(localStorage.getItem("hour12"));
+  $("#hour1 .description").val(localStorage.getItem("hour1"));
+  $("#hour2 .description").val(localStorage.getItem("hour2"));
+  $("#hour3 .description").val(localStorage.getItem("hour3"));
+  $("#hour4 .description").val(localStorage.getItem("hour4"));
+
+  function testHour() {
+    var currentHour = moment().hour();
+    $(".time-block").each(function () {
+      var thisHourBlock = parseInt($(this).attr("id").split("hour")[1]);
+      if (thisHourBlock < 5) {
+        thisHourBlock += 12;
+      }
+      if (currentHour > thisHourBlock) {
+        $(this).removeClass("present");
+        $(this).removeClass("future");
+        $(this).addClass("past");
+      } else if (currentHour < thisHourBlock) {
+        $(this).removeClass("present");
+        $(this).removeClass("past");
+        $(this).addClass("future");
+      } else if (currentHour == thisHourBlock) {
+        $(this).removeClass("past");
+        $(this).removeClass("future");
+        $(this).addClass("present");
+      }
+    });
+  }
+});
+
+testHour();
