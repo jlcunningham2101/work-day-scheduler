@@ -38,23 +38,27 @@ This application includes the following features:
 GIVEN I am using a daily planner to create a schedule
 
 - WHEN I open the planner
-  THEN the current day is displayed at the top of the calendar
+  -- THEN the current day is displayed at the top of the calendar
 - WHEN I scroll down
-  THEN I am presented with time blocks for standard business hours
+  -- THEN I am presented with time blocks for standard business hours
 - WHEN I view the time blocks for that day
-  THEN each time block is color-coded to indicate whether it is in the past, present, or future
+  -- THEN each time block is color-coded to indicate whether it is in the past, present, or future
 - WHEN I click into a time block
-  THEN I can enter an event
+  -- THEN I can enter an event
 - WHEN I click the save button for that time block
-  THEN the text for that event is saved in local storage
+  -- THEN the text for that event is saved in local storage
 - WHEN I refresh the page
-  THEN the saved events persist
+  -- THEN the saved events persist
 
 ### Usage
 
 Application users have the ability to enter workday tasks and save them. Time slots are color coded based on whether the task is in the past, present, or future.
 
 ### Webpage Screenshots
+
+![Screenshot](<assets/images/Screenshot%20(34).png>)
+![Screenshot](<assets/images/Screenshot%20(35).png>)
+![Screenshot](<assets/images/Screenshot%20(36).png>)
 
 ### GitHub Link
 
